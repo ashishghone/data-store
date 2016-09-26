@@ -1,0 +1,7 @@
+<div>
+    <select ng-model="pageDate.selMonth" ng-change="changeMonth()">
+        <option ng-repeat="month in months">{{month}}</option>
+    </select>
+    <div><span class="dateBox" ng-repeat="i in daysInMonth track by $index" ng-click="pickDate($index+1)"> {{$index+1}} </span></div>
+    <input ng-model="pageDate.year" />
+</div>

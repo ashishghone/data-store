@@ -1,0 +1,10 @@
+follow standard code practices 
+display big text area 
+autosave in html database so as to make it faster  
+datepicker directive or can be treated as a different submodule 
+
+faster data retrival like a desktop app 
+check if data exist in indexdb/local storage 
+if not get it donwloaded from web sotrage/ db on server 
+web workers will keep donwloading data in indexedb/web storage 
+

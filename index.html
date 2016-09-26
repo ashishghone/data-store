@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Data Store</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="js/angular.js"></script>
+    <script src="js/dstore.module.js"></script>
+    <script src="js/factory.date.js"></script>
+    <script src="js/datepicker.directive.js"></script>
+    <script src="js/main.controller.js"></script>
+    <style type="text/css">
+        textarea {
+            height: 200px;
+            width: 100%;
+        }
+        
+        .dateBox {
+            background: yellow;
+            border: solid 1px #000;
+            padding: 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body ng-app="dstore" ng-controller="mainController">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <textarea ng-model = "dData"></textarea>
+                <datepicker data = "dData"></datepicker>
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+    </div>
+</body>
+
+</html>
