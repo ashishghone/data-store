@@ -12,6 +12,7 @@
     <script src="js/dstore.module.js"></script>
     <script src="js/factory.date.js"></script>
     <script src="js/datepicker.directive.js"></script>
+    <script src="js/service.helper.js"></script>
     <script src="js/main.controller.js"></script>
     <style type="text/css">
         textarea {
@@ -25,6 +26,10 @@
             padding: 2px;
             cursor: pointer;
         }
+        
+        .bgRed {
+            background: red;
+        }
     </style>
 </head>
 
@@ -32,8 +37,14 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <textarea ng-model = "dData"></textarea>
-                <datepicker data = "dData"></datepicker>
+                <textarea ng-model="dData" ng-keypress="updateData($event.keyCode)"></textarea>
+                <div>
+                    <select ng-model="pageDate.selMonth" ng-change="changeMonth()">
+                        <option ng-repeat="month in months">{{month}}</option>
+                    </select>
+                    <div><span ng-class="['dateBox', pageDate.day == $index+1?'bgRed':'']" ng-repeat="i in daysInMonth track by $index" ng-click="pickDate($index+1)"> {{$index+1}} </span></div>
+                    <input ng-model="pageDate.year" />
+                </div>
             </div>
             <div class="col-md-6"></div>
         </div>

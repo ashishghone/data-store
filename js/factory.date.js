@@ -29,6 +29,10 @@
 
             daysInMonth: function (month, year) {
                 return new Date(year, month + 1, 0).getDate();
+            },
+
+            getPDate: function (year, month, day) {
+                return year + "-" + month + "-" + day;
             }
         }
     }
